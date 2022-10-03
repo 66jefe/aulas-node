@@ -1,0 +1,54 @@
+Comando no prompt de comandos para iniciar projeto nodeJs
+principais comando que é utilizado com o gerenciador de pacotes npm
+
+npm init -y {
+	incializa projeto com node, que vem o arquivo packeage.json onde tem toda configuração do projeto
+	-y ele confirma todas as perguntas que tem na instalação do pacote
+}
+
+npm install {
+	será utilizado para fazer a instalção de pacotes de terceiros/biblioteca para o nosso projeto. exemplo microframework que sera utilizado: express
+}
+
+npm i {
+	apos fazer o clone de um projeto node, ele ira vir sem a pasta node_modules. e para instalar essa pasta basta utilizar o comando npm i ou npm install que ira atualizar o projeto
+}
+
+npm ls {
+	lista todas as dependencias que esta instalado no seu projeto
+}
+
+npm ls --depth 0 {
+	caso não queira que seja apresentado toda a arvore de dependencias, utiliza esse comando para mostrar o que realmente precisa no caso o express
+}
+
+npm outdated {
+	apresenta quais modulos ou bibliotecas estão desatualizadas, utiliza esse comando
+}
+
+npm update <nome do modulo/biblioteca> {
+	caso no npm outdated apresente algum modulo/biblioteca desatualizado, utiliza esse comando para atualizar
+	caso queira apenas o npm update ele ira atualizar tudo que esta dentro do projeto
+}
+
+npm uninstall {
+	para desinstalar um modulo do projeto
+}
+
+npm install nodemon -D {
+	nodemon é o servidor para rodar a aplicação node, sem precisar ficar reiniciando a aplicação manualmente, o parametro -D(maiusculo) é para ser somente em ambiente de desenvolvimento
+}
+
+- para rodar com o servidor, no terminal digita ao inves de node, utiliza npx
+
+- para melhorar a inicilização do servidor nodemon, podemos configurar em packeage.json na parte de script um alias para inicializar. nesse exemplo foi utilizado
+[...]
+"scripts": {
+    "start": "npx nodemon src/index.js"
+  },
+[...]  
+digitando no prompt o comando node start, ira iniciar o servidor dessa aplicação
+
+npm install uuidv4 {
+	essa biblioteca gera id unico e universal na aplicação que estiver
+}
