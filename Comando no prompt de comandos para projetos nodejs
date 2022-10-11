@@ -52,3 +52,34 @@ digitando no prompt o comando node start, ira iniciar o servidor dessa aplicaç�
 npm install uuidv4 {
 	essa biblioteca gera id unico e universal na aplicação que estiver
 }
+
+npm install typescript -D {
+	faz a instalção do typescript no projeto. a opção -D (maiusculo) deixa em modo de desenovlvimento
+}
+
+npm install @types/express {
+	fazer a instalção junto com o typescript
+}
+
+npm install ts-node-dev -D{
+	instalar servidor de typscript em ambiente de desenvolvimento
+}
+
+dentro de package.json do projeto typscript, em scripts alterar para 'ts-node-dev --inspect --ignore-watch node_modules src/server.ts'{
+	ts-node-dev é o servidor onde ira fazer o live reload automatico.
+	--inspect é para inspecionar o codigo
+	--ignore-watch é para ignorar algo expecifico no caso a pasta node_modules
+	src/server.ts é o local e o arquivo que o servidor precisa executar
+}
+
+para executar o projeto ts basta ir no cmd e digitar o comando {
+	npm run dev(conforme o nome dado ao script dentro de packeage.json)
+}
+
+npm install knex{
+	knex.js é uma biblioteca para conexão de banco de dados e onde você digita codigo js e interpreta como sql
+}
+
+npm install sqlite3{
+	são recursos do banco que ira utilizar nessa aplicação
+}
